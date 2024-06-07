@@ -372,7 +372,7 @@ KafkaClient::KafkaClient(ClientType                     clientType,
         }
         else
         {
-            KAFKA_API_DO_LOG(Log::Level::Err, "failed to be initialized with property[%s:%s], result[%d]", k.c_str(), v->c_str(), result);
+            KAFKA_API_DO_LOG(Log::Level::Err, "failed to be initialized with property[%s:%s], result[%d]: %s", k.c_str(), v->c_str(), result, errInfo.c_str());
         }
     }
 
